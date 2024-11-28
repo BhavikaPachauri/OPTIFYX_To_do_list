@@ -1,0 +1,151 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow: hidden;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #ff7e67;
+    box-shadow: 0 0 5px #ff7e67;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ff7e67;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #ff5722;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fafafa;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.03);
+    background: #ffe3d9;
+}
+
+li span {
+    flex: 1;
+    cursor: pointer;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button {
+    margin-left: 8px;
+    padding: 5px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.edit-btn {
+    background: #ffc107;
+    color: #fff;
+}
+
+button.edit-btn:hover {
+    background: #ff9800;
+}
+
+button.delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+button.delete-btn:hover {
+    background: #c62828;
+}
+
+/* Animated Cursor */
+.cursor, .cursor-follower {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    background: #ff5722;
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ff5722;
+}
+
+/* Custom Animations */
+body {
+    cursor: none;
+}
